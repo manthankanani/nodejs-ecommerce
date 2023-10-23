@@ -1,0 +1,40 @@
+{
+  "name": "E-commerce Marketplace",
+  "version": "1.0.0",
+  "description": "E-commerce marketplace All-in-one Solution",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "blog",
+    "ecommerce",
+    "erp",
+    "cms"
+  ],
+  "author": "Manthan Kanani",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "node-mysql-import": "^1.1.0",
+    "nodemailer": "^6.8.0",
+    "routes": "^2.1.0",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manthankanani/nodejs-ecommerce.git"
+  }
+}
