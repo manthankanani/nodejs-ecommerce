@@ -253,7 +253,7 @@ class Partner {
                 "capability": users[0].capability,
                 "nickname": users[0].nickname,
                 "activation_key": users[0].activation_key,
-                "status:": users[0].status,
+                "status": users[0].status,
                 "meta": metaKey,
                 "created_at": users[0].created_at,
                 "modified_at": users[0].modified_at,
