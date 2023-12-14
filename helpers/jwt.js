@@ -8,7 +8,6 @@
 const jwtoken 					= require("jsonwebtoken");
 
 // import helpers
-const error                     = require('./error');
 const config                    = require('./../config');
 
 
@@ -19,20 +18,8 @@ class JWT{
         this.algorithm      = "HS256";
     }
 
-    verify = (req, res, next) =>  {
-        if (typeof req.headers.authorization != "undefined") {
-            let token = req.headers.authorization.split(" ")[1];
-            jwtoken.verify(token, this.secret, { algorithm: this.algorithm }, (err, user) => {
-                if (err) {
-                    return error.sendForbidden(res, "Not Authorized or invalid token.");
-                } else {
-                    req.body.auth = user;
-                    return next();
-                }
-            });
-        } else {
-            return error.sendForbidden(res, "Not Authorized or invalid token.");
-        }
+    verify = (token) => {
+        return jwtoken.verify(token, this.secret, { algorithm: this.algorithm });
     }
     
     sign = (payload, expiresIn) => {
